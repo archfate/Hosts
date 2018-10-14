@@ -14,5 +14,5 @@ cat toblock-without-shorturl-optimized.lst | awk '{print "0.0.0.0 " $1}' |  awk 
 rm toblock-without-shorturl-optimized.lst
 
 #git add .
-#git commit -m "`date`"
-#git push origin master
+#git commit -m "update list on $(date)"
+#git push -u origin master
