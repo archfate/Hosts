@@ -2,11 +2,11 @@
 
 file=adservers
 
-sources=(
+URLs=(
    " https://raw.githubusercontent.com/missdeer/blocklist/master/toblock-without-shorturl-optimized.lst"
 )
 
-   wget -N $sources
+   wget -N $URLs
    echo "# Converted from https://github.com/missdeer/blocklist/blob/master/toblock-without-shorturl-optimized.lst" > $file
    echo "# https://github.com/missdeer/blocklist" >> $file
    echo "# Thanks to all contributors." >> $file
