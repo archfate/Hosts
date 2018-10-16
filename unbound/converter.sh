@@ -2,7 +2,11 @@
 
 file=adservers
 
-   wget -N https://raw.githubusercontent.com/missdeer/blocklist/master/toblock-without-shorturl-optimized.lst
+sources=(
+   " https://raw.githubusercontent.com/missdeer/blocklist/master/toblock-without-shorturl-optimized.lst"
+)
+
+   wget -N $sources
    echo "# Converted from https://github.com/missdeer/blocklist/blob/master/toblock-without-shorturl-optimized.lst" > $file
    echo "# https://github.com/missdeer/blocklist" >> $file
    echo "# Thanks to all contributors." >> $file
@@ -13,6 +17,6 @@ cat toblock-without-shorturl-optimized.lst | awk '{print "0.0.0.0 " $1}' |  awk 
 # Cleanup...
 rm toblock-without-shorturl-optimized.lst
 
-#git add .
-#git commit -m "update list on $(date)"
-#git push -u origin master
+git add .
+git commit -m "update list on $(date)"
+git push -u origin master
