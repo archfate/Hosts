@@ -8,14 +8,14 @@ HEADER=/etc/hosts.head
 
 # Set up working dir.
 TMPDIR=/tmp/hostadblock.XXXXXX
-mktmp -d "${TMPDIR}"
+mktemp -d "${TMPDIR}"
 
 BLACKLIST=${TMPDIR}/mybase.txt 
 WHITELIST=${TMPDIR}/whitelist
 
 # Download blocklists
 wget -P "${TMPDIR}" https://download.dnscrypt.info/blacklists/domains/mybase.txt
-wget -p "${TMPDIR}" https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+wget -P "${TMPDIR}" https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 wget -P "${TMPDIR}" https://raw.githubusercontent.com/archfate/Hosts/master/whitelist.txt
 
 # Transform format
