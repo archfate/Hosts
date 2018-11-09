@@ -1,9 +1,0 @@
-archlinux.org
-wiki.archlinux.org
-baidu.com
-tieba.baidu.com
-reddit.com
-old.reddit.com
-new.reddit.com
-www.reddit.com
-
