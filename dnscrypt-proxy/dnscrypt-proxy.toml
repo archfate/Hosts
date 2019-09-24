@@ -199,7 +199,7 @@ fallback_resolver = '9.9.9.9:53'
 ## Never let dnscrypt-proxy try to use the system DNS settings;
 ## unconditionally use the fallback resolver.
 
-ignore_system_dns = false
+ignore_system_dns = true
 
 
 ## Maximum time (in seconds) to wait for network connectivity before
@@ -523,11 +523,20 @@ cache_neg_max_ttl = 600
 
   ## An example of a remote source from https://github.com/DNSCrypt/dnscrypt-resolvers
 
-  [sources.'public-resolvers']
-  urls = ['https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v2/public-resolvers.md', 'https://download.dnscrypt.info/resolvers-list/v2/public-resolvers.md']
-  cache_file = '/var/cache/dnscrypt-proxy/public-resolvers.md'
+#  [sources.'public-resolvers']
+#  urls = ['https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v2/public-resolvers.md', 'https://download.dnscrypt.info/resolvers-list/v2/public-resolvers.md']
+#  cache_file = '/var/cache/dnscrypt-proxy/public-resolvers.md'
+#  minisign_key = 'RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3'
+#  prefix = ''
+
+# opennic
+
+##Resolvers from the [OpenNIC](https://www.opennic.org/) project.
+
+  [sources.'opennic']
+  urls = ['https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v2/opennic.md', 'https://download.dnscrypt.info/resolvers-list/v2/opennic.md']
   minisign_key = 'RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3'
-  prefix = ''
+  cache_file = 'opennic.md'
 
   ## Quad9 over DNSCrypt - https://quad9.net/
 
